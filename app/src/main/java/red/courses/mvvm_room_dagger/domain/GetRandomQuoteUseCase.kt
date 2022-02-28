@@ -1,7 +1,6 @@
 package red.courses.mvvm_room_dagger.domain
 
 import red.courses.mvvm_room_dagger.data.QuoteRepository
-import red.courses.mvvm_room_dagger.data.model.QuoteModel
 import red.courses.mvvm_room_dagger.domain.model.Quote
 import javax.inject.Inject
 
