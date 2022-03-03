@@ -4,7 +4,9 @@ import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
+import org.junit.AfterClass
 import org.junit.Before
+import org.junit.BeforeClass
 import org.junit.Test
 import red.courses.mvvm_room_dagger.data.QuoteRepository
 import red.courses.mvvm_room_dagger.domain.model.Quote
@@ -15,6 +17,23 @@ class GetRandomQuoteUseCaseTest {
     private lateinit var quoteRepository: QuoteRepository
 
     lateinit var getRandomQuoteUseCase: GetRandomQuoteUseCase
+
+    /**
+     * Para utilizar la etiqueta @BeforeClass y @AfterClass deben estar dentro de un
+     * companion object ademas de tener la etiqueta @JmvStatic para que efectivamente
+     * el metodo sea utilizado sin dicha etiqueta no sera llamado.
+     */
+
+    companion object{
+        @BeforeClass @JvmStatic
+        fun setUpCommon(){
+
+        }
+        @AfterClass @JvmStatic
+        fun tearDownCommon(){
+
+        }
+    }
 
     @Before
     fun onBefore() {

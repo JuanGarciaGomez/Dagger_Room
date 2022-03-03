@@ -25,6 +25,7 @@ class MainActivity2 : AppCompatActivity() {
                 binding.editTextQuote.text.toString())
             binding.editTextAuthor.setText("")
             binding.editTextQuote.setText("")
+            finish()
         }
 
 
